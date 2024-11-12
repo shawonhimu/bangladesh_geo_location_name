@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>বিভাগ, জেলা, উপজেলা, এবং ইউনিয়ন নির্বাচন করুন</title>
+	</head>
+	<body>
+		<h2>Get Bangladeshi GEO Location names with bangla and english by hidden input field</h2>
+		<label for="division">বিভাগ নির্বাচন করুন:</label>
+		<select id="division" onchange="loadDistricts()">
+			<option value="">--বিভাগ নির্বাচন করুন--</option>
+		</select>
+		<br /><br />
+
+		<label for="district">জেলা নির্বাচন করুন:</label>
+		<select id="district" onchange="loadUpazillas()">
+			<option value="">--জেলা নির্বাচন করুন--</option>
+		</select>
+		<br /><br />
+
+		<label for="upazilla">উপজেলা নির্বাচন করুন:</label>
+		<select id="upazilla" onchange="loadUnions()">
+			<option value="">--উপজেলা নির্বাচন করুন--</option>
+		</select>
+		<br /><br />
+
+		<label for="union">ইউনিয়ন নির্বাচন করুন:</label>
+		<select id="union" onchange="setUnionFields()">
+			<option value="">--ইউনিয়ন নির্বাচন করুন--</option>
+		</select>
+
+		<!-- Hidden inputs for storing selected names and bn_names -->
+		<input type="hidden" id="division_name" name="division_name" />
+		<input type="hidden" id="division_bn_name" name="division_bn_name" />
+		<input type="hidden" id="district_name" name="district_name" />
+		<input type="hidden" id="district_bn_name" name="district_bn_name" />
+		<input type="hidden" id="upazilla_name" name="upazilla_name" />
+		<input type="hidden" id="upazilla_bn_name" name="upazilla_bn_name" />
+		<input type="hidden" id="union_name" name="union_name" />
+		<input type="hidden" id="union_bn_name" name="union_bn_name" />
+
+		<script src="js/getgeoname.js"></script>
+	</body>
+</html>

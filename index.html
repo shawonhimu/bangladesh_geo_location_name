@@ -36,7 +36,7 @@
 			let unions = [];
 
 			// Fetch data for divisions, districts, upazillas, and unions
-			fetch("divisions.json")
+			fetch("json/divisions.json")
 				.then((response) => response.json())
 				.then((data) => {
 					divisions = data;
@@ -44,21 +44,21 @@
 				})
 				.catch((error) => console.error("Error fetching divisions:", error));
 
-			fetch("districts.json")
+			fetch("json/districts.json")
 				.then((response) => response.json())
 				.then((data) => {
 					districts = data;
 				})
 				.catch((error) => console.error("Error fetching districts:", error));
 
-			fetch("upazillas.json")
+			fetch("json/upazillas.json")
 				.then((response) => response.json())
 				.then((data) => {
 					upazillas = data;
 				})
 				.catch((error) => console.error("Error fetching upazillas:", error));
 
-			fetch("unions.json")
+			fetch("json/unions.json")
 				.then((response) => response.json())
 				.then((data) => {
 					unions = data;
